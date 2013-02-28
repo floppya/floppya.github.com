@@ -1,0 +1,31 @@
+@import "compass/reset";
+@import "susy";
+@import "compass/typography/vertical_rhythm";
+
+$total-columns: 12;
+$column-width: 4em;
+$gutter-width: 1em;
+$grid-padding: $gutter-width;
+
+$show-grid-backgrounds: false;
+
+@include establish-baseline;
+
+h1 {
+	@include adjust-font-size-to($base-font-size * 3);
+}
+
+#logo {
+	@include span-columns(2);
+}
+
+#slogan {
+	@include span-columns(2);
+	@include adjust-font-size-to($base-font-size, 3);
+}
+
+.entry-list {
+	li {
+		@include span-columns(10, 2);
+	}
+}
