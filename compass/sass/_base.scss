@@ -8,11 +8,16 @@ $gutter-width: 1em;
 $grid-padding: $gutter-width;
 
 $show-grid-backgrounds: false;
-
+$container-style: static;
 @include establish-baseline;
 
 h1 {
 	@include adjust-font-size-to($base-font-size * 3);
+}
+
+#page-container {
+  @include container;
+  @include susy-grid-background;
 }
 
 #logo {
@@ -26,6 +31,6 @@ h1 {
 
 .entry-list {
 	li {
-		@include span-columns(10, 2);
+		@include span-columns(10);
 	}
 }
