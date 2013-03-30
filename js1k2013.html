@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+	<head>
+		<title>JS1k, 1k demo submission [ID]</title>
+		<meta charset="utf-8" />
+	</head>
+	<body>
+		<canvas id="c"></canvas>
+		<script>
+			var b = document.body;
+			var c = document.getElementsByTagName('canvas')[0];
+			var a = c.getContext('2d');
+			document.body.clientWidth; // fix bug in webkit: http://qfox.nl/weblog/218
+		</script>
+		<script>
+// start of submission //
+var g=Math.PI,p=Math.random,q=Math.min,r=c.width=h=c.height=500,s=r/2,t=h/2;
+function u(b,f,j,k,d,l,m){var e=Math.sqrt(q(b.c,b.e)/b.e),n=e*b.length;m+=b.f;var y=n*Math.cos(m)+d,n=n*Math.sin(m)+l;a.beginPath();a.strokeStyle="rgb("+b.h+",0,0)";a.lineWidth=5*e*k;a.moveTo(s-k*(d+j),t+k*l);a.lineTo(s-k*(y+j),t+k*n);a.stroke();b.c+=f;if(b.c>=b.g&&0<b.a){b.a-=1;d=b.d;if(0>=b.a&&!d.length){l=8*(p()+1);for(e=0;e<2*g;e+=0.7)d.push(v(l,e,0,255))}for(;0<b.a;){l=Math.ceil(p()*b.a);var e=40*(p()+0.5),C=0.4*g*(p()-0.5),e=v(e,C,l);b.a-=l;d.push(e)}}for(d=0;d<b.d.length;d++)u(b.d[d],f,j,k,
+y,n,m)}function v(b,f,j,k){return{a:j,length:b,d:[],f:f,c:0,g:1,e:3,h:k|0}}var w=0,x,z=[];function A(b,f){return{x:b,z:f,r:v(40,-0.5*g+p()-0.5,q(w+1,40))}}function B(){var b=(new Date).getTime(),f=(b-(x||b))/750;x=b;a.clearRect(0,0,r,h);for(var j in z)b=z[j],u(b.r,f,b.x,1/b.z,0,190,0),b.z-=f,0>b.z&&(z[j]=A(3*r*(p()-0.5),7));z.sort(function(b,d){return d.z-b.z});setTimeout(B,20);w+=f}for(i=0;50>i;i++)z.push(A(3*r*(p()-0.5),7*p()+0.1));B();
+// end of submission //
+		</script>
+	</body>
+</html>
