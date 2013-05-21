@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://floppya.github.io//sitemap.xml 
+Sitemap: http://floppya.github.io/sitemap.xml 

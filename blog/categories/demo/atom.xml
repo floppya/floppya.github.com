@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[floppya's unfinished business]]></title>
-  <link href="http://floppya.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: demo | floppya's unfinished business]]></title>
+  <link href="http://floppya.github.io/blog/categories/demo/atom.xml" rel="self"/>
   <link href="http://floppya.github.io/"/>
   <updated>2013-05-20T18:22:43-06:00</updated>
   <id>http://floppya.github.io/</id>
@@ -23,14 +23,22 @@ I was inspired to remix my js1k demo after seeing <a href="http://zeinspiration.
 where everything is made from images of Snoop.
 </p>
 
+
+
+
 <!--more-->
-<canvas id="c"></canvas>
+
+
+<p><canvas id="c"></canvas></p>
+
 <script>
 var b = document.body;
 var c = document.getElementsByTagName('canvas')[0];
 var a = c.getContext('2d');
 document.body.clientWidth; // fix bug in webkit: http://qfox.nl/weblog/218
 </script>
+
+
 <script>
 // start of submission //
 for(var l=["/images/snoop/head0.png","/images/snoop/head1.png","/images/snoop/head2.png","/images/snoop/head3.png","/images/snoop/leaf.png"],r,s=l,t={},v=0;v<s.length;v++){var w=s[v],x=new Image;x.src=w;t[w]=x}r=t;function y(b){return b[Math.floor(Math.random()*b.length)]}var z=Math.PI,A=Math.random,B=Math.min,C=c.width=h=c.height=500,D=C/2,E=h/2,F=7;
@@ -39,6 +47,7 @@ for(var l=["/images/snoop/head0.png","/images/snoop/head1.png","/images/snoop/he
                                                                                 function O(){var b=(new Date).getTime(),f=(b-(J||b))/700;J=b;a.clearRect(0,0,C,h);var b=f*B(H/5,1),g;for(g in L){var d=L[g];G(d.i,f,d.x,1/d.b,0,190,0);d.b-=b;0>d.b&&(L[g]=M(N(),F))}L.sort(function(b,d){return d.b-b.b});requestAnimFrame(O,20);H+=f}for(i=0;50>i;i++)L.push(M(N(),A()*F+0.1));window.requestAnimFrame=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||function(b){window.setTimeout(b,1E3/60)};O();
                                                                                 // end of submission //
 </script>
+
 ]]></content>
   </entry>
   
@@ -51,75 +60,39 @@ for(var l=["/images/snoop/head0.png","/images/snoop/head1.png","/images/snoop/he
     <a href="http://js1k.com/">js1k</a> is an annual javascript programming
     competition which imposes the constraint that entries must be smaller
     than 1024 bytes in size. The theme for <a href="http://js1k.com/2013-spring/">2013</a>
-    was &#8220;Spring&#8221; however the theme was more of a suggestion than a requirement.
+    was "Spring" however the theme was more of a suggestion than a requirement.
 </p>
+
+
 <p>
     This was my first time competing and, unsurprisingly,
-    <a href="http://js1k.com/2013-spring/demo/1530">my entry</a> didn&#8217;t place
+    <a href="http://js1k.com/2013-spring/demo/1530">my entry</a> didn't place
     in the top 10. However it did receive an 
     <a href="https://twitter.com/js1k/status/331055898812358660">honorable mention</a>
     which puts it in the top 15, I suppose.
 </p>
+
+
 <!--more-->
-    <canvas id="c"></canvas>
 
-    <script language="javascript">
-        var b = document.body;
-        var c = document.getElementsByTagName('canvas')[0];
-        var a = c.getContext('2d');
-        document.body.clientWidth; // fix bug in webkit: http://qfox.nl/weblog/218
-    </script>
-    <script language="javascript">
-    // start of submission //
-    var l=Math.PI,q=Math.random,r=Math.min,s=c.width=h=c.height=500,t=s/2,u=h/2,v=7;
-    function w(b,f,k,d,g,m,n){var e=Math.sqrt(r(b.c,b.e)/b.e),p=e*b.length;n+=b.f+0.02*Math.cos(x);var A=p*Math.cos(n)+g,p=p*Math.sin(n)+m;a.beginPath();a.strokeStyle="rgb("+b.h+",0,0)";a.lineWidth=5*e*d;a.moveTo(t-d*(g+k),u+d*m);a.lineTo(t-d*(A+k),u+d*p);a.stroke();b.c+=f;if(b.c>=b.g&&0<b.a){b.a-=1;g=b.d;if(0>=b.a&&!g.length){m=8*(q()+1);for(e=0;e<2*l;e+=0.7)g.push(y(m,e,0,255))}for(;0<b.a;){m=Math.ceil(q()*b.a);var e=40*(q()+0.5),F=0.4*l*(q()-0.5),e=y(e,F,m);b.a-=m;g.push(e)}}for(g=0;g<b.d.length;g++)w(b.d[g],
-    f,k,d,A,p,n)}function y(b,f,k,d){return{a:k,length:b,d:[],f:f,c:0,g:1,e:3,h:d|0}}var x=0,z,B=[];function C(b,f){return{x:b,b:f,i:y(40,-0.5*l+q()-0.5,r(x+1,38))}}function D(){var b=s*q()+65;0.5<q()&&(b=-b);return b}function E(){var b=(new Date).getTime(),f=(b-(z||b))/700;z=b;a.clearRect(0,0,s,h);var b=f*r(x/5,1),k;for(k in B){var d=B[k];w(d.i,f,d.x,1/d.b,0,190,0);d.b-=b;0>d.b&&(B[k]=C(D(),v))}B.sort(function(b,d){return d.b-b.b});requestAnimFrame(E,20);x+=f}for(i=0;50>i;i++)B.push(C(D(),q()*v+0.1));
-    window.requestAnimFrame=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||function(b){window.setTimeout(b,1E3/60)};E();
-    // end of submission //
-    </script>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[MakeHuman + ChopHuman + Spriter + Bonedaddy - any artistic ability equals]]></title>
-    <link href="http://floppya.github.io/blog/2013/05/20/makehuman-plus-chophuman-plus-spriter-plus-bonedaddy-any-artistic-ability-equals/"/>
-    <updated>2013-05-20T15:28:00-06:00</updated>
-    <id>http://floppya.github.io/blog/2013/05/20/makehuman-plus-chophuman-plus-spriter-plus-bonedaddy-any-artistic-ability-equals</id>
-    <content type="html"><![CDATA[<p>
-Here&#8217;s an example of my unreasonably long pipeline from MakeHuman to
-skeletal animation with Haxe. The left and right arrow keys change
-the blending weight between idle and speed-walking animations. Hovering
-demostrates the IK blend node which is operating on the right arm.
-You may need to click on the flash player to give it focus.
-</p>
-<!--more-->
-<script language="javascript">
-    var flashvars = {
-    };
-    var params = {
-        menu: "false",
-        scale: "noScale",
-        allowFullscreen: "true",
-        allowScriptAccess: "always",
-        bgcolor: ""
-    };
-    var attributes = {
-        id:"zippy"
-    };
-    swfobject.embedSWF(
-        "/swf/bondaddynmeexample.swf",
-        "altContent", "480px", "480px", "10.0.0",
-        "/swf/expressInstall.swf",
-        flashvars, params, attributes
-    );
-</script>
+<pre><code>&lt;canvas id="c"&gt;&lt;/canvas&gt;
 
-<div id="altContent">
-    This requires flash:
-    <p><a href="http://www.adobe.com/go/getflashplayer">Get Adobe Flash player</a></p>
-</div>
-
+&lt;script language="javascript"&gt;
+    var b = document.body;
+    var c = document.getElementsByTagName('canvas')[0];
+    var a = c.getContext('2d');
+    document.body.clientWidth; // fix bug in webkit: http://qfox.nl/weblog/218
+&lt;/script&gt;
+&lt;script language="javascript"&gt;
+// start of submission //
+var l=Math.PI,q=Math.random,r=Math.min,s=c.width=h=c.height=500,t=s/2,u=h/2,v=7;
+function w(b,f,k,d,g,m,n){var e=Math.sqrt(r(b.c,b.e)/b.e),p=e*b.length;n+=b.f+0.02*Math.cos(x);var A=p*Math.cos(n)+g,p=p*Math.sin(n)+m;a.beginPath();a.strokeStyle="rgb("+b.h+",0,0)";a.lineWidth=5*e*d;a.moveTo(t-d*(g+k),u+d*m);a.lineTo(t-d*(A+k),u+d*p);a.stroke();b.c+=f;if(b.c&gt;=b.g&amp;&amp;0&lt;b.a){b.a-=1;g=b.d;if(0&gt;=b.a&amp;&amp;!g.length){m=8*(q()+1);for(e=0;e&lt;2*l;e+=0.7)g.push(y(m,e,0,255))}for(;0&lt;b.a;){m=Math.ceil(q()*b.a);var e=40*(q()+0.5),F=0.4*l*(q()-0.5),e=y(e,F,m);b.a-=m;g.push(e)}}for(g=0;g&lt;b.d.length;g++)w(b.d[g],
+f,k,d,A,p,n)}function y(b,f,k,d){return{a:k,length:b,d:[],f:f,c:0,g:1,e:3,h:d|0}}var x=0,z,B=[];function C(b,f){return{x:b,b:f,i:y(40,-0.5*l+q()-0.5,r(x+1,38))}}function D(){var b=s*q()+65;0.5&lt;q()&amp;&amp;(b=-b);return b}function E(){var b=(new Date).getTime(),f=(b-(z||b))/700;z=b;a.clearRect(0,0,s,h);var b=f*r(x/5,1),k;for(k in B){var d=B[k];w(d.i,f,d.x,1/d.b,0,190,0);d.b-=b;0&gt;d.b&amp;&amp;(B[k]=C(D(),v))}B.sort(function(b,d){return d.b-b.b});requestAnimFrame(E,20);x+=f}for(i=0;50&gt;i;i++)B.push(C(D(),q()*v+0.1));
+window.requestAnimFrame=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||function(b){window.setTimeout(b,1E3/60)};E();
+// end of submission //
+&lt;/script&gt;
+</code></pre>
 ]]></content>
   </entry>
   

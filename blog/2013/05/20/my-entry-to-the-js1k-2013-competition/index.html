@@ -5,13 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>floppya's unfinished business</title>
+  <title>My entry to the js1k 2013 competition - floppya's unfinished business</title>
   <meta name="author" content="floppya">
 
   
-  <meta name="description" content="
-I was inspired to remix my js1k demo after seeing this picture
-where everything is made from images of Snoop. ">
+  <meta name="description" content="js1k is an annual javascript programming competition which imposes the constraint that entries must be smaller than 1024 bytes in size. The theme &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +18,7 @@ where everything is made from images of Snoop. ">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://floppya.github.io">
+  <link rel="canonical" href="http://floppya.github.io/blog/2013/05/20/my-entry-to-the-js1k-2013-competition">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="floppya's unfinished business" type="application/atom+xml">
@@ -76,59 +74,12 @@ where everything is made from images of Snoop. ">
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2013/05/20/js1k-snoop-lion-remix/">Js1k Snoop Lion REMIX</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-05-20T18:11:00-06:00" pubdate data-updated="true">May 20<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>
-I was inspired to remix my js1k demo after seeing <a href="http://zeinspiration.tumblr.com/post/22638955502/everything-is-made-of-snoop-dogg">this picture</a>
-where everything is made from images of Snoop.
-</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2013/05/20/js1k-snoop-lion-remix/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/05/20/my-entry-to-the-js1k-2013-competition/">My Entry to the Js1k 2013 Competition</a></h1>
+      <h1 class="entry-title">My Entry to the Js1k 2013 Competition</h1>
     
     
       <p class="meta">
@@ -151,7 +102,7 @@ where everything is made from images of Snoop.
   </header>
 
 
-  <div class="entry-content"><p>
+<div class="entry-content"><p>
     <a href="http://js1k.com/">js1k</a> is an annual javascript programming
     competition which imposes the constraint that entries must be smaller
     than 1024 bytes in size. The theme for <a href="http://js1k.com/2013-spring/">2013</a>
@@ -164,27 +115,35 @@ where everything is made from images of Snoop.
     <a href="https://twitter.com/js1k/status/331055898812358660">honorable mention</a>
     which puts it in the top 15, I suppose.
 </p>
+<!--more-->
+    <canvas id="c"></canvas>
+
+    <script language="javascript">
+        var b = document.body;
+        var c = document.getElementsByTagName('canvas')[0];
+        var a = c.getContext('2d');
+        document.body.clientWidth; // fix bug in webkit: http://qfox.nl/weblog/218
+    </script>
+    <script language="javascript">
+    // start of submission //
+    var l=Math.PI,q=Math.random,r=Math.min,s=c.width=h=c.height=500,t=s/2,u=h/2,v=7;
+    function w(b,f,k,d,g,m,n){var e=Math.sqrt(r(b.c,b.e)/b.e),p=e*b.length;n+=b.f+0.02*Math.cos(x);var A=p*Math.cos(n)+g,p=p*Math.sin(n)+m;a.beginPath();a.strokeStyle="rgb("+b.h+",0,0)";a.lineWidth=5*e*d;a.moveTo(t-d*(g+k),u+d*m);a.lineTo(t-d*(A+k),u+d*p);a.stroke();b.c+=f;if(b.c>=b.g&&0<b.a){b.a-=1;g=b.d;if(0>=b.a&&!g.length){m=8*(q()+1);for(e=0;e<2*l;e+=0.7)g.push(y(m,e,0,255))}for(;0<b.a;){m=Math.ceil(q()*b.a);var e=40*(q()+0.5),F=0.4*l*(q()-0.5),e=y(e,F,m);b.a-=m;g.push(e)}}for(g=0;g<b.d.length;g++)w(b.d[g],
+    f,k,d,A,p,n)}function y(b,f,k,d){return{a:k,length:b,d:[],f:f,c:0,g:1,e:3,h:d|0}}var x=0,z,B=[];function C(b,f){return{x:b,b:f,i:y(40,-0.5*l+q()-0.5,r(x+1,38))}}function D(){var b=s*q()+65;0.5<q()&&(b=-b);return b}function E(){var b=(new Date).getTime(),f=(b-(z||b))/700;z=b;a.clearRect(0,0,s,h);var b=f*r(x/5,1),k;for(k in B){var d=B[k];w(d.i,f,d.x,1/d.b,0,190,0);d.b-=b;0>d.b&&(B[k]=C(D(),v))}B.sort(function(b,d){return d.b-b.b});requestAnimFrame(E,20);x+=f}for(i=0;50>i;i++)B.push(C(D(),q()*v+0.1));
+    window.requestAnimFrame=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||function(b){window.setTimeout(b,1E3/60)};E();
+    // end of submission //
+    </script>
+
 </div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2013/05/20/my-entry-to-the-js1k-2013-competition/">Read on &rarr;</a>
-    </footer>
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/05/20/makehuman-plus-chophuman-plus-spriter-plus-bonedaddy-any-artistic-ability-equals/">MakeHuman + ChopHuman + Spriter + Bonedaddy - Any Artistic Ability Equals</a></h1>
-    
-    
-      <p class="meta">
-        
+  
+
+<span class="byline author vcard">Posted by <span class="fn">floppya</span></span>
+
+      
 
 
 
@@ -196,37 +155,40 @@ where everything is made from images of Snoop.
   
 
 
-<time datetime="2013-05-20T15:28:00-06:00" pubdate data-updated="true">May 20<span>th</span>, 2013</time>
-        
-      </p>
+<time datetime="2013-05-20T17:38:00-06:00" pubdate data-updated="true">May 20<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/demo/'>demo</a>, <a class='category' href='/blog/categories/javascript/'>javascript</a>, <a class='category' href='/blog/categories/js1k/'>js1k</a>
+  
+</span>
+
+
+    </p>
     
-  </header>
-
-
-  <div class="entry-content"><p>
-Here&#8217;s an example of my unreasonably long pipeline from MakeHuman to
-skeletal animation with Haxe. The left and right arrow keys change
-the blending weight between idle and speed-walking animations. Hovering
-demostrates the IK blend node which is operating on the right arm.
-You may need to click on the flash player to give it focus.
-</p>
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://floppya.github.io/blog/2013/05/20/my-entry-to-the-js1k-2013-competition/" data-via="" data-counturl="http://floppya.github.io/blog/2013/05/20/my-entry-to-the-js1k-2013-competition/" >Tweet</a>
+  
+  
+  
 </div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2013/05/20/makehuman-plus-chophuman-plus-spriter-plus-bonedaddy-any-artistic-ability-equals/">Read on &rarr;</a>
-    </footer>
-  
 
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/05/20/makehuman-plus-chophuman-plus-spriter-plus-bonedaddy-any-artistic-ability-equals/" title="Previous Post: MakeHuman + ChopHuman + Spriter + Bonedaddy - any artistic ability equals">&laquo; MakeHuman + ChopHuman + Spriter + Bonedaddy - any artistic ability equals</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2013/05/20/js1k-snoop-lion-remix/" title="Next Post: js1k Snoop Lion REMIX">js1k Snoop Lion REMIX &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
 
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
 </div>
+
 <aside class="sidebar">
   
     <section>
@@ -251,7 +213,7 @@ You may need to click on the flash player to give it focus.
 <section>
   <h1>GitHub Repos</h1>
   <ul id="gh_repos">
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">Status updating...</li>
   </ul>
   
   <a href="https://github.com/floppya">@floppya</a> on GitHub
@@ -283,6 +245,7 @@ You may need to click on the flash player to give it focus.
 
   
 </aside>
+
 
     </div>
   </div>
