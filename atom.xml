@@ -4,7 +4,7 @@
   <title><![CDATA[floppya's unfinished business]]></title>
   <link href="http://floppya.github.io/atom.xml" rel="self"/>
   <link href="http://floppya.github.io/"/>
-  <updated>2013-05-20T18:22:43-06:00</updated>
+  <updated>2013-05-23T14:14:40-06:00</updated>
   <id>http://floppya.github.io/</id>
   <author>
     <name><![CDATA[floppya]]></name>
@@ -12,6 +12,88 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Smiley Picker]]></title>
+    <link href="http://floppya.github.io/blog/2013/05/23/smiley-picker/"/>
+    <updated>2013-05-23T12:00:00-06:00</updated>
+    <id>http://floppya.github.io/blog/2013/05/23/smiley-picker</id>
+    <content type="html"><![CDATA[<p>
+    Finally, a javascript widget that represents values along the sad/happy
+    emotional axis. Available for use under the terms of the MIT License.
+</p>
+
+<!--more-->
+
+<style type="text/css">
+    #text-face {
+        font-size: 200%;
+    }
+    #slider {
+        position: relative;
+        height: 20px;
+        border: 1px solid #222;
+    }
+    .ui-slider-handle {
+        margin-left: -10px;
+        display: block;
+        position: relative;
+        width: 20px;
+        height: 20px;
+        border: 1px solid #222;
+        background: #222;
+    }
+    #sad {
+        position: absolute;   
+    }
+    #happy {
+        position: absolute;
+        display: block;
+        right: 0;
+    }
+</style>
+
+<p>
+    Using canvas for rendering:
+</p>
+<canvas id="canvas-face" width="200" height="200" style="width:200px;height:200px"></canvas>
+<div id="slider">
+    <span id="sad">Sad</span>
+    <span id="happy">Happy</span>
+</div>
+<p>
+    Fallback for browsers which do not support canvas:
+</p>
+<div id="text-face">
+</div>
+
+<script src="http://floppya.github.io//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script language="javascript" src="http://floppya.github.io/javascripts/smiley.js"></script>
+<script language="javascript">
+$(function() {
+    var canvas_smiley = new CanvasSmiley(
+        document.getElementById('canvas-face'));
+    canvas_smiley.render();
+    var text_smiley = new Smiley(
+        document.getElementById('text-face'));
+    text_smiley.render();
+    $('#slider').slider({
+        min: 0,
+        max: 100,
+        value: canvas_smiley.value * 100,
+        slide: function(event, ui) {
+            var value = ui.value / 100.0;
+            canvas_smiley.value = value;
+            text_smiley.value = value;
+            canvas_smiley.render();
+            text_smiley.render();
+        }
+    });
+});
+</script>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[js1k Snoop Lion REMIX]]></title>
